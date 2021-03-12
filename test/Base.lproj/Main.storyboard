@@ -1,24 +1,265 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18121" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="U0I-9J-oiD">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18092"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--首頁-->
+        <scene sceneID="pFQ-w9-fdg">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="gZ7-ZF-FEf" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ot2-LM-heP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="封面二" translatesAutoresizingMaskIntoConstraints="NO" id="3Z5-kw-LuS">
+                                <rect key="frame" x="10" y="277" width="394" height="343"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AnO-HX-adD">
+                                <rect key="frame" x="5" y="296" width="404" height="304"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" title="更多照片"/>
+                                <connections>
+                                    <segue destination="LMS-TF-Esg" kind="show" id="fmF-ad-ASw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="N43-z8-dd2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" title="首頁" id="2IW-mg-FZF"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n8W-lQ-heI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="3736.2318840579715" y="-161.38392857142856"/>
+        </scene>
+        <!--首頁-->
+        <scene sceneID="zaS-gE-8EL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aWJ-Vb-sGl" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="首頁" image="sparkles" catalog="system" id="nwG-A6-d7z"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6ea-Xd-Pyc">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gZ7-ZF-FEf" kind="relationship" relationship="rootViewController" id="kGI-63-vLW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3WI-nU-pAL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2826.0869565217395" y="-161.38392857142856"/>
+        </scene>
+        <!--介紹-->
+        <scene sceneID="ita-wL-gVv">
+            <objects>
+                <tableViewController id="9x7-2H-Vre" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="hcX-do-Bet">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="wlP-bt-Wsv">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="164" id="6rC-AN-qKd">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="164"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6rC-AN-qKd" id="NvD-nl-Dgz">
+                                            <rect key="frame" x="0.0" y="0.0" width="384.5" height="164"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="111台北市立動物園" translatesAutoresizingMaskIntoConstraints="NO" id="cCu-gP-x5z">
+                                                    <rect key="frame" x="-7" y="0.0" width="399" height="164"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="b4T-BH-N4c" kind="show" id="GHQ-MP-4w1"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="tgp-iq-dhs">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="164" id="FCM-PH-R3F">
+                                        <rect key="frame" x="0.0" y="237.50000034679067" width="414" height="164"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FCM-PH-R3F" id="p8S-pM-NhI">
+                                            <rect key="frame" x="0.0" y="0.0" width="384.5" height="164"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="222新竹市立動物園" translatesAutoresizingMaskIntoConstraints="NO" id="HCa-A7-eDZ">
+                                                    <rect key="frame" x="-14" y="0.0" width="399" height="164"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.9529411793" green="0.9529411793" blue="0.9529411793" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="Fyy-7W-rUo">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="164" id="QLk-n1-TiU">
+                                        <rect key="frame" x="0.0" y="450.50000069358134" width="414" height="164"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QLk-n1-TiU" id="o8u-YG-hkm">
+                                            <rect key="frame" x="0.0" y="0.0" width="384.5" height="164"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="333綠世界生態農場" translatesAutoresizingMaskIntoConstraints="NO" id="LcT-MQ-Tuk">
+                                                    <rect key="frame" x="-14" y="0.0" width="399" height="164"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="9x7-2H-Vre" id="qWh-gZ-YX8"/>
+                            <outlet property="delegate" destination="9x7-2H-Vre" id="wmA-9V-NEv"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="介紹" id="HQr-YA-dNI"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qd3-wo-5yA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2802.898550724638" y="519.64285714285711"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="K8z-Jo-nzf">
+            <objects>
+                <viewController id="b4T-BH-N4c" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="syy-Bf-Y7i">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="DiA-fg-ZzE">
+                                <rect key="frame" x="22" y="232" width="371" height="487"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">臺北市立動物園
+
+地址：台北市文山區新光路二段30號
+
+電話：02-2938-2300
+
+票價：
+(入園門票）全票60 / 半票30
+(教育中心）全票20 / 半票10
+(遊園列車）5元
+
+支付方式：
+悠遊卡EasyCard、一卡通iPass、愛金卡(iCash2.0)、快樂有錢卡HappyCash、信用卡、Pay.Taipei、現金、Line Pay
+</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" address="YES"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="G17-DA-Uqi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5zz-yl-7nW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kdR-jf-Hba" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3553.6231884057975" y="519.64285714285711"/>
+        </scene>
+        <!--照片-->
+        <scene sceneID="tLy-tP-W1u">
+            <objects>
+                <viewController id="LMS-TF-Esg" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="U8Y-ft-hGJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="62C-k3-gRt">
+                                <rect key="frame" x="0.0" y="88" width="414" height="174"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="tAQ-gp-XHL">
+                                <rect key="frame" x="0.0" y="270" width="414" height="174"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="3" translatesAutoresizingMaskIntoConstraints="NO" id="3Zi-Io-xaF">
+                                <rect key="frame" x="0.0" y="452" width="414" height="174"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pxi-yi-M4q"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="照片" id="Pae-AW-tCY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qYC-ei-U5z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4527.536231884058" y="-161.38392857142856"/>
+        </scene>
+        <!--介紹-->
+        <scene sceneID="sGU-23-hSp">
+            <objects>
+                <navigationController id="HAQ-nC-dHM" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="介紹" image="heart.fill" catalog="system" id="pmy-D7-ClD"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ydP-ec-JcT">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="9x7-2H-Vre" kind="relationship" relationship="rootViewController" id="kyg-hn-0s5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NDh-2u-VEr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1916" y="520"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="PQz-yf-sUF">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="U0I-9J-oiD" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mhC-US-YnJ">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="aWJ-Vb-sGl" kind="relationship" relationship="viewControllers" id="t6U-vc-Upm"/>
+                        <segue destination="HAQ-nC-dHM" kind="relationship" relationship="viewControllers" id="ySj-BX-spN"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qez-BP-fBE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1915.9420289855075" y="-161.38392857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="1" width="1200" height="630"/>
+        <image name="111台北市立動物園" width="500" height="375"/>
+        <image name="2" width="640" height="384"/>
+        <image name="222新竹市立動物園" width="300" height="168"/>
+        <image name="3" width="1170" height="780"/>
+        <image name="333綠世界生態農場" width="512" height="370"/>
+        <image name="heart.fill" catalog="system" width="128" height="109"/>
+        <image name="sparkles" catalog="system" width="112" height="128"/>
+        <image name="封面二" width="453" height="340"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
